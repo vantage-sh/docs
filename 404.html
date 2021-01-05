@@ -180,36 +180,80 @@
 
 
 
+  
+    
+  
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+    <label class="md-nav__link" for="nav-2">
+      General
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="General" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        General
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
   <li class="md-nav__item">
     <a href="/connecting/" class="md-nav__link">
-      Setup
+      Connecting Your Account
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
 
   <li class="md-nav__item">
     <a href="/permissions/" class="md-nav__link">
-      Permissions
+      AWS Permissions
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
 
   <li class="md-nav__item">
     <a href="/syncing/" class="md-nav__link">
-      Syncing
+      Syncing Your Account
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="/supported_services/" class="md-nav__link">
+      Supported AWS Services
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -219,10 +263,106 @@
 
 
 
+  
+    
+  
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    
+    <label class="md-nav__link" for="nav-3">
+      Features
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Features" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
   <li class="md-nav__item">
-    <a href="/supported_services/" class="md-nav__link">
-      AWS Services & Regions
+    <a href="/views/" class="md-nav__link">
+      Views
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="/workspaces/" class="md-nav__link">
+      Workspaces
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="/logs/" class="md-nav__link">
+      Cloudwatch Logs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="/metrics/" class="md-nav__link">
+      Cloudwatch Metrics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="/reports/" class="md-nav__link">
+      Weekly Cost Reports
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="/audit/" class="md-nav__link">
+      Audit Log
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -274,7 +414,7 @@
       <script>
         app = initialize({
           base: "/",
-          features: [],
+          features: ['navigation.sections'],
           search: Object.assign({
             worker: "/assets/javascripts/worker/search.8c7e0a7e.min.js"
           }, typeof search !== "undefined" && search)

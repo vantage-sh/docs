@@ -14,7 +14,7 @@
     
     
       
-        <title>Syncing Your Account - Vantage Documentation</title>
+        <title>Workspaces - Vantage Documentation</title>
       
     
     
@@ -61,11 +61,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#syncing" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -94,7 +89,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Syncing Your Account
+              Workspaces
             
           </span>
         </div>
@@ -184,16 +179,14 @@
       
 
 
-  
-
 
   
     
   
-  <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
     
     <label class="md-nav__link" for="nav-2">
       General
@@ -238,63 +231,11 @@
           
 
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Syncing Your Account
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../syncing/" class="md-nav__link">
       Syncing Your Account
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#automatic-syncing" class="md-nav__link">
-    Automatic Syncing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manual-syncing" class="md-nav__link">
-    Manual Syncing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#coming-soon-resource-level-syncs" class="md-nav__link">
-    Coming Soon: Resource-Level Syncs
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -321,14 +262,16 @@
       
 
 
+  
+
 
   
     
   
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Features
@@ -360,11 +303,18 @@
           
 
 
+  
 
-  <li class="md-nav__item">
-    <a href="../workspaces/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Workspaces
     </a>
+    
   </li>
 
         
@@ -432,72 +382,21 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#automatic-syncing" class="md-nav__link">
-    Automatic Syncing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manual-syncing" class="md-nav__link">
-    Manual Syncing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#coming-soon-resource-level-syncs" class="md-nav__link">
-    Coming Soon: Resource-Level Syncs
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                <h1 id="syncing">Syncing</h1>
-<h2 id="automatic-syncing">Automatic Syncing</h2>
-<p>Vantage works by retrieving metadata about your infrastructure on a periodic interval that is currently set at a maximum of every hour. Without any action necessary by you, Vantage will determine what resources have been deleted, added and changed and represent them in the Vantage console accordingly. We are sensitive to our impact on AWS API limits and have done considerable work on minimizing the amount of API requests we make to limit impact. That being said, we haven't had a single user mention concerns with API calls we make. </p>
-<p>In the navigation bar at the top of the Vantage console you'll see a refresh icon available to you. When you hover over that refresh icon, Vantage will inform you when the time a sync took place. </p>
-<h2 id="manual-syncing">Manual Syncing</h2>
-<p>In the event that you're making changes to your infrastructure, it's very common that you'll need to refresh the state with Vantage prior to the one hour interval taking place. To issue a manual account sync, you simply need to click the refresh icon in the top right of the navigation bar. The refresh icon will begin rotating signalling that the sync is in progress. When the sync is complete, the icon will stop rotating. You may need to refresh the page you're currently on to get the latest information after the sync has occured. </p>
-<p>When you issue a sync, Vantage will do a global inspection across all AWS regions and services and perform the following:</p>
+                  <h1>Workspaces</h1>
+                
+                <p>Vantage allows you to connect multiple AWS accounts to the same Vantage account. When your Vantage account is created you are assigned a "Default" workspace but you have the ability to create multiple workspaces. Each workspace is a logical grouping of AWS accounts and has its own respective set of views. There are two main use-cases we see for customers leveraging workspaces on Vantage.</p>
 <ul>
-<li>Add new AWS resources in the Vantage console that are newly added.</li>
-<li>Remove any references to out of date or deleted resources.</li>
-<li>Update all attributes with existing resources that have been changed. </li>
+<li><strong>Grouping resources together across AWS accounts</strong>: One customer on AWS sometimes has multiple AWS accounts for the same company. Vantage customers will use a single workspace to group multiple AWS accounts together to view all resources in the same console and views. </li>
+<li><strong>Context Switching Between AWS Accounts</strong>: Some customers (such as indepedendent contractors) will create a workspace per customer of theirs. This allows them to quickly do discovery of the resources in that AWS account and level set for assisting those customers and context switch between accounts quickly while keeping respective views and resources separate.</li>
 </ul>
-<p>Syncs usually take anywhere from 5 seconds to 30 seconds depending on the size and complexity of your AWS account and we're working on tools </p>
-<h2 id="coming-soon-resource-level-syncs">Coming Soon: Resource-Level Syncs</h2>
-<p>Sometimes you don't need to issue a global sync when you're just looking at a single resource that may have changed. Vantage is working on a method for refreshing only a single resource that will be done near instantaneously. We hope to have this complete in Q1 of 2021. </p>
+<p>When you have more than one workspace in your Vantage account a workspace menu will appear in your navigation menu for you to switch between workspaces. Workspaces are also represented on your account page for you to view, add AWS accounts to and delete whenever you'd like.</p>
+<p>Please note the restrictions on AWS account limits per Vantage account on the <a href="https://vantage.sh/pricing">pricing page</a>.</p>
                 
               
               
@@ -516,7 +415,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../permissions/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../views/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -525,19 +424,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                AWS Permissions
+                Views
               </div>
             </div>
           </a>
         
         
-          <a href="../supported_services/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../logs/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Supported AWS Services
+                Cloudwatch Logs
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
