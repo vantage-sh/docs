@@ -14,7 +14,7 @@
     
     
       
-        <title>AWS Services & Regions - Vantage Documentation</title>
+        <title>Syncing - Vantage Documentation</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#aws-services-regions" class="md-skip">
+        <a href="#syncing" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              AWS Services & Regions
+              Syncing
             
           </span>
         </div>
@@ -206,19 +206,6 @@
       
 
 
-
-  <li class="md-nav__item">
-    <a href="../syncing/" class="md-nav__link">
-      Syncing
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
   
 
 
@@ -230,12 +217,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        AWS Services & Regions
+        Syncing
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      AWS Services & Regions
+      Syncing
     </a>
     
       
@@ -252,15 +239,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#supported-services" class="md-nav__link">
-    Supported Services
+  <a href="#automatic-syncing" class="md-nav__link">
+    Automatic Syncing
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#supported-regions" class="md-nav__link">
-    Supported Regions
+  <a href="#manual-syncing" class="md-nav__link">
+    Manual Syncing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coming-soon-resource-level-syncs" class="md-nav__link">
+    Coming Soon: Resource-Level Syncs
   </a>
   
 </li>
@@ -269,6 +263,19 @@
   
 </nav>
     
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../supported_services/" class="md-nav__link">
+      AWS Services & Regions
+    </a>
   </li>
 
     
@@ -297,15 +304,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#supported-services" class="md-nav__link">
-    Supported Services
+  <a href="#automatic-syncing" class="md-nav__link">
+    Automatic Syncing
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#supported-regions" class="md-nav__link">
-    Supported Regions
+  <a href="#manual-syncing" class="md-nav__link">
+    Manual Syncing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coming-soon-resource-level-syncs" class="md-nav__link">
+    Coming Soon: Resource-Level Syncs
   </a>
   
 </li>
@@ -323,181 +337,21 @@
               
                 
                 
-                <h1 id="aws-services-regions">AWS Services &amp; Regions</h1>
-<h2 id="supported-services">Supported Services</h2>
-<p>Vantage works by using custom logic to query APIs for each individual AWS service. While we support the most popular services we do not offer support for all AWS services by default. That being said: if you have an AWS service you'd like to be supported we can typically add support for most AWS services in under a week. </p>
-<p>To request new service support on Vantage, please email support@vantage.sh with the subject line of "New AWS Service Support" and please include as much information as you can about what information you'd like to see. </p>
-<p>Below is a list of supported AWS services:</p>
-<table>
-<thead>
-<tr>
-<th>Service</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>EC2</td>
-<td>Vantage supports all EC2 instance types, all on-demand and spot pricing and supporting CloudWatch metrics &amp; logs. Vantage also imports all underlying EC2 images where possible.</td>
-</tr>
-<tr>
-<td>S3</td>
-<td>Vantage supports S3 Buckets and corresponding bucket pricing. We provide daily storage and object count figures. We do not have permission to read from your S3 Buckets.</td>
-</tr>
-<tr>
-<td>CodePipeline</td>
-<td>Vantage supports CodePipeline.</td>
-</tr>
-<tr>
-<td>CodeBuild</td>
-<td>Vantage supports CodeBuild.</td>
-</tr>
-<tr>
-<td>DynamoDB</td>
-<td>Vantage supports DynamoDB tables.</td>
-</tr>
-<tr>
-<td>EBS</td>
-<td>Vantage supports all EBS volume types and corresponding pricing.</td>
-</tr>
-<tr>
-<td>Elasticache</td>
-<td>Vantage supports all Elasticache clusters.</td>
-</tr>
-<tr>
-<td>ECS</td>
-<td>Vantage supports ECS services and its corresponding pricing.</td>
-</tr>
-<tr>
-<td>Fargate</td>
-<td>Vantage supports Fargate services and its corresponding pricing.</td>
-</tr>
-<tr>
-<td>IAM</td>
-<td>Vantage supports IAM Groups, IAM Users and IAM Roles.</td>
-</tr>
-<tr>
-<td>Networking primitives</td>
-<td>Vantage supports networking primitives like Elastic IPs, VPCs, Subnets, Availability Zones and Security Groups.</td>
-</tr>
-<tr>
-<td>Lambda</td>
-<td>Vantage supports Lambda and is currently bolstering more formal support for it.</td>
-</tr>
-<tr>
-<td>ECR</td>
-<td>Vantage supports ECR and its corresponding pricing.</td>
-</tr>
-<tr>
-<td>EKS</td>
-<td>Vantage supports EKS and its corresponding pricing.</td>
-</tr>
-<tr>
-<td>Secrets Manager</td>
-<td>Vantage supports AWS Secrets Manager and its corresponding pricing. We do not have permissions to read your secrets.</td>
-</tr>
-<tr>
-<td>Route53</td>
-<td>Vantage supports Route 53 Hosted Zones and its corresponding pricing. We also have write access for Route 53 Record Sets.</td>
-</tr>
-<tr>
-<td>RDS</td>
-<td>Vantage supports RDS and corresponding pricing.</td>
-</tr>
-<tr>
-<td>Tags</td>
-<td>Vantage supports Tags and can allow you to create views from AWS Tags.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="supported-regions">Supported Regions</h2>
-<p>Vantage supports the following AWS regions. In the event your region isn't listed and you'd like it added, please contact Vantage support at support@vantage.sh and we are happy to help. In some cases, we can add the region and in other regions such as GovCloud there are some complications. </p>
-<table>
-<thead>
-<tr>
-<th>Region</th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>us-east-1</td>
-<td>US East, North Virginia</td>
-</tr>
-<tr>
-<td>us-east-2</td>
-<td>US East, Ohio</td>
-</tr>
-<tr>
-<td>us-west-1</td>
-<td>US West, Northern California</td>
-</tr>
-<tr>
-<td>us-west-2</td>
-<td>US West, Oregon</td>
-</tr>
-<tr>
-<td>ap-east-1</td>
-<td>Asia Pacific, Hong Kong</td>
-</tr>
-<tr>
-<td>ap-south-1</td>
-<td>Asia Pacific, Mumbai</td>
-</tr>
-<tr>
-<td>ap-northeast-1</td>
-<td>Asia Pacific, Tokyo</td>
-</tr>
-<tr>
-<td>ap-northeast-2</td>
-<td>Asia Pacific, Seoul</td>
-</tr>
-<tr>
-<td>ap-southeast-1</td>
-<td>Asia Pacific, Singapore</td>
-</tr>
-<tr>
-<td>ap-southeast-2</td>
-<td>Asia Pacific, Sydney</td>
-</tr>
-<tr>
-<td>ca-central-1</td>
-<td>Canada, Central</td>
-</tr>
-<tr>
-<td>eu-central-1</td>
-<td>Europe, Frankfurt</td>
-</tr>
-<tr>
-<td>eu-west-1</td>
-<td>Europe, Ireland</td>
-</tr>
-<tr>
-<td>eu-west-2</td>
-<td>Europe, London</td>
-</tr>
-<tr>
-<td>eu-west-3</td>
-<td>Europe, Paris</td>
-</tr>
-<tr>
-<td>eu-south-1</td>
-<td>Europe, Milan</td>
-</tr>
-<tr>
-<td>eu-north-1</td>
-<td>Europe, Stockholm</td>
-</tr>
-<tr>
-<td>me-south-1</td>
-<td>Middle East, Bahrain</td>
-</tr>
-<tr>
-<td>sa-east-1</td>
-<td>South America, Sao Paulo</td>
-</tr>
-</tbody>
-</table>
+                <h1 id="syncing">Syncing</h1>
+<h2 id="automatic-syncing">Automatic Syncing</h2>
+<p>Vantage works by retrieving metadata about your infrastructure on a periodic interval that is currently set at a maximum of every hour. Without any action necessary by you, Vantage will determine what resources have been deleted, added and changed and represent them in the Vantage console accordingly. We are sensitive to our impact on AWS API limits and have done considerable work on minimizing the amount of API requests we make to limit impact. That being said, we haven't had a single user mention concerns with API calls we make. </p>
+<p>In the navigation bar at the top of the Vantage console you'll see a refresh icon available to you. When you hover over that refresh icon, Vantage will inform you when the time a sync took place. </p>
+<h2 id="manual-syncing">Manual Syncing</h2>
+<p>In the event that you're making changes to your infrastructure, it's very common that you'll need to refresh the state with Vantage prior to the one hour interval taking place. To issue a manual account sync, you simply need to click the refresh icon in the top right of the navigation bar. The refresh icon will begin rotating signalling that the sync is in progress. When the sync is complete, the icon will stop rotating. You may need to refresh the page you're currently on to get the latest information after the sync has occured. </p>
+<p>When you issue a sync, Vantage will do a global inspection across all AWS regions and services and perform the following:</p>
+<ul>
+<li>Add new AWS resources in the Vantage console that are newly added.</li>
+<li>Remove any references to out of date or deleted resources.</li>
+<li>Update all attributes with existing resources that have been changed. </li>
+</ul>
+<p>Syncs usually take anywhere from 5 seconds to 30 seconds depending on the size and complexity of your AWS account and we're working on tools </p>
+<h2 id="coming-soon-resource-level-syncs">Coming Soon: Resource-Level Syncs</h2>
+<p>Sometimes you don't need to issue a global sync when you're just looking at a single resource that may have changed. Vantage is working on a method for refreshing only a single resource that will be done near instantaneously. We hope to have this complete in Q1 of 2021. </p>
                 
               
               
@@ -516,7 +370,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../syncing/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../permissions/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -525,11 +379,25 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Syncing
+                Permissions
               </div>
             </div>
           </a>
         
+        
+          <a href="../supported_services/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                AWS Services & Regions
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>

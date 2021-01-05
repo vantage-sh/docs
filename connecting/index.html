@@ -234,6 +234,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#connecting-multiple-aws-accounts" class="md-nav__link">
+    Connecting Multiple AWS Accounts
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -253,8 +260,34 @@
 
 
   <li class="md-nav__item">
+    <a href="../permissions/" class="md-nav__link">
+      Permissions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../syncing/" class="md-nav__link">
+      Syncing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
     <a href="../supported_services/" class="md-nav__link">
-      Supported AWS Services & Regions
+      AWS Services & Regions
     </a>
   </li>
 
@@ -305,6 +338,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#connecting-multiple-aws-accounts" class="md-nav__link">
+    Connecting Multiple AWS Accounts
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -332,6 +372,8 @@
 <p>Vantage only collects metadata about your infrastructure and never even attempts to read sensitive information from the underlying services. Our CloudFormation template is public and you may audit the list of permissions <a href="https://vantage-public.s3.amazonaws.com/x-account-role-create-11132020.json">here</a>. </p>
 <h3 id="opting-into-write-actions">Opting into Write Actions</h3>
 <p>Vantage currently supports a limited subset of write, update and delete actions. When you attempt to perform these actions with Vantage, Vantage will determine what IAM permissions it needs to complete those actions and request them accordingly. It will always be at your discretion to opt into these actions. You may also choose to never use Vantage for write actions. </p>
+<h3 id="connecting-multiple-aws-accounts">Connecting Multiple AWS Accounts</h3>
+<p>Vantage allows you to connect multiple AWS accounts. By default, we require you to start with one AWS account and ensure it properly connected. Once you have done that, you can navigate to your account settings page to add additional AWS accounts. Please note that there are restrictions on the number of AWS accounts you can add based upon your tier. To see those limits please visit our <a href="https://vantage.sh/pricing">pricing page</a></p>
                 
               
               
@@ -365,13 +407,13 @@
           </a>
         
         
-          <a href="../supported_services/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../permissions/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Supported AWS Services & Regions
+                Permissions
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
