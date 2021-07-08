@@ -14,7 +14,7 @@
     
     
       
-        <title>Audit Log - Vantage Documentation</title>
+        <title>Cost Reports - Vantage Documentation</title>
       
     
     
@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#filtering-cost-reports" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -89,7 +94,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Audit Log
+              Cost Reports
             
           </span>
         </div>
@@ -290,11 +295,52 @@
           
 
 
+  
 
-  <li class="md-nav__item">
-    <a href="../cost_reports/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Cost Reports
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Cost Reports
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#filtering-cost-reports" class="md-nav__link">
+    Filtering Cost Reports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-service-subcategory-costs" class="md-nav__link">
+    AWS Service Subcategory Costs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -381,18 +427,11 @@
           
 
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../audit/" class="md-nav__link">
       Audit Log
     </a>
-    
   </li>
 
         
@@ -408,22 +447,59 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#filtering-cost-reports" class="md-nav__link">
+    Filtering Cost Reports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-service-subcategory-costs" class="md-nav__link">
+    AWS Service Subcategory Costs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Audit Log</h1>
+                  <h1>Cost Reports</h1>
                 
-                <p>Vantage has a feature called "Audit Log" available for customers in our <a href="https://vantage.sh/pricing">business tier</a> that allows you to see an audit log on a per-resource basis of everything that has changed for the resource. </p>
-<p>For supported resources, Vantage will give you a running log of what changes were made to that resource which you can use for record purposes and governance. When you upgrade your account to the business tier, you'll have this feature available to you for supported services on the "Audit Log" tab. </p>
-<p>Example use-cases:</p>
-<ul>
-<li><strong>IAM Role History</strong>: Be able to see what users made what changes to certain roles.</li>
-<li><strong>Container Service Changes</strong>: See what changes to your ECS &amp; Fargate services by what users (or other AWS services such as CodeDeploy)</li>
-<li><strong>[Soon] Create views from audit logs</strong>: Be able to see what users are logging into the console for security posture. </li>
-</ul>
+                <p>Cost Reports give you the ability to see all accrued costs that match certain conditions. By default, Vantage provides you with a Cost Report named "All Resources" that will show you all costs across all AWS member accounts, regions, services and tags. You can create as many Cost Reports as you'd like to filter your costs by any of the aforementioned dimensions. Many customers typically setup one Cost Report per AWS tag that their team has defined to see costs for certain components of their application.</p>
+<p>Below is an example of what a Cost Report will look like after you have connected your account.</p>
+<p><img alt="Example Cost Report" src="/img/cost_reports.png" /></p>
+<h2 id="filtering-cost-reports">Filtering Cost Reports</h2>
+<p>Cost Reports allow you to see your costs grouped by AWS Service in descending order of accrued costs. By clicking AWS Service rows in the table below, the graph will update with just costs for that specific AWS Service. You may also click the AWS Service name link to see subcategory costs which is described in the next section. </p>
+<h2 id="aws-service-subcategory-costs">AWS Service Subcategory Costs</h2>
+<p>Each AWS Service typically has multiple underlying subcategory costs. For example, in the main cost report table view you'll see all of your S3 Costs in aggregate. However, S3 charges on a number of different subcategories like the amount of storage you've used, the amount of egress traffic for retrieving S3 Objects and for the actual HTTP requests you make to query for S3 Objects. By clicking an AWS service name from the main Cost Report table, you can see a full breakdown of all subcategory costs that comprise that main AWS service cost. Below is an example of subcategory costs for EC2-Other which includes subcategory costs for EBS Volumes, data transfer and more. </p>
+<p><img alt="Example Subcategory Costs" src="/img/subcategory_costs.png" /></p>
+<p>When supported and resources are present, Vantage will also show you the Active Resources contributing to these subcategory costs. </p>
                 
               
               
@@ -442,7 +518,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../reports/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../supported_services/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -451,11 +527,25 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Weekly Cost Reports
+                Supported AWS Services
               </div>
             </div>
           </a>
         
+        
+          <a href="../views/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Active Resources
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>
